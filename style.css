@@ -1,4 +1,5 @@
 body, html {
+    width:100%;
     height: 100%;
     margin: 0;
 }
@@ -23,6 +24,7 @@ ul {
 header{
   color: rgb(216,184,187);
   z-index: 99999;
+
 }
  nav {
    position:fixed;
@@ -341,6 +343,39 @@ h2{
   color: white;
 }
 */
+
+.hero2{
+  background-image: url("img/cake_class1.jpg");
+  height:100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  }
+
+  .hero_text2 h1 {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color:pink;
+
+    margin-top:30px;
+    font-family: 'Italianno', cursive;
+    font-size: 40px;
+    text-decoration:underline;
+  }
+
+  .hero_text2 p {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color:pink;
+
+    margin-top:30px;
+    font-family: 'Italianno', cursive;
+    font-size: 40px;
+    margin-top:65px;
+  }
 .link{
   color:grey;
   height:auto;
@@ -390,7 +425,8 @@ h2{
         font-size:3vh;
         text-align: left;
         padding-right:550px;
-        
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -458,4 +494,12 @@ h2{
     margin-top: 10px;
     color: white;
     /*text-decoration-color: white;*/
+}
+@media(max-width: 320px)
+{
+  header{
+    width:100%;
+    position: fixed;
+    resize: horizontal;
+  }
 }
