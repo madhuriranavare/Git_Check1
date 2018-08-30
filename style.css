@@ -20,6 +20,10 @@ ul {
     padding: 0;
     background-color: #333;
 }*/
+header{
+  color: rgb(216,184,187);
+  z-index: 99999;
+}
  nav {
    position:fixed;
    top:0;
@@ -28,12 +32,10 @@ ul {
    box-sizing: border-box;
    transition:.3s;
    display: flex;
-   flex-flow:row;
-   justify-content: space-around;
-   
-
-   background-color: grey;
- }
+   background-color: rgba(216,184,187,0.8);
+   z-index: 99999;
+   height:auto;
+   }
 
  nav .black {
     background:rgba(0,0,0,0.8);
@@ -47,31 +49,75 @@ nav ul{
   margin:0;
   padding:0;
   display:flex;
+
 }
 nav ul li{
   list-style: none;
   flex:1;
-  
-  
+  float:right;
 }
-
+.navigation{
+  display: flex;
+  justify-content: flex-end;
+}
 nav ul li a{
-  line-height: 80px;
-  color: #151515;
+  line-height: 20px;
+  /*color: #151515;*/
   padding: 12px 30px;
   text-decoration: none;
   text-transform: uppercase;
   transition: .3s;
   width:100%;
-  justify-content: space-around;
   justify-content: space-between;
   font-size: 1.3vw;
+  /*opacity: 1;*/
 }
 
 nav .black ul li a{
   color:#fff;
 }
 
+nav a:hover{
+  background-color: white;
+  text-decoration: underline;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+/*.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+/*.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-google-plus {
+    background: #55ACEE;
+    color: white;
+}*/
 .mad-image {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
     background-image:  url("img/cake2.png");
@@ -85,7 +131,7 @@ nav .black ul li a{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    margin-top: 40px;
+    /*margin-top: 40px;*/
 
     background-size: 100% 100%;
 }
@@ -118,28 +164,7 @@ nav .black ul li a{
 	width:30px;
 }
 
-.flex-container {
-  display: flex;
-  flex-flow:row wrap; 
-  justify-content: baseline;
-  align-items: flex-end;
-  background-color: #f1f1f1;
-  margin:0,20px,20px,20px;
-  margin-top: 0px;
-  background-image: url("img/color.jpg");
 
-}
-
-.child-container {
-  background-color: #f1f1f1;
-  width: 33%;
-  text-align: center;
-  line-height: 20px;
-  font-size: 15px;
-  font-family: 'Roboto Condensed', sans-serif;
-  box-sizing: border-box;
-  padding: 5px;
-}
 
 *{
 	margin:0px;
@@ -172,8 +197,8 @@ nav .black ul li a{
 	width:50px;
 	height:50px;
 	margin: 0px 10px;
-	background-border:100%;
-	background:white;
+	/*background-border:100%;
+	/*background:white;*/
 }
 
 .footer-social-icons ul li a{
@@ -277,22 +302,60 @@ h2{
     font-size:2vw;
   }
 
-@media (max-width:600px){
-    .flex-container{
-        display: flex;
-        flex-flow: column wrap;
-    }
-    .child-container{
-        width: 100%;
-        flex-flow:column-wrap;
-    }
+.fa {
+  padding: 6px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
 }
 
+.fa:hover {
+    opacity: 0.7;
+}
+
+/*.fa-facebook {
+  background: #3B5998;
+  color: white;
+}*/
+
+/*.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+*/
+.link{
+  color:grey;
+  height:auto;
+  width:auto;
+}
+.footer-text{
+  text-align: center;
+  margin-top: 10px;
+  margin-right:20px
+}
 @media (max-width:600px){
-    .mad-image{
+    .mad-image .cake_class_text{
         margin-top: 22%;
         display:flex;
-        flex-direction: column-wrap;
+        flex-wrap: column-wrap;
         font-size:2vw;
         
     }
@@ -302,8 +365,10 @@ h2{
     .cake_class {
         margin-top: 22%;
         display:flex;
-        flex-direction: column-wrap;
+        flex-wrap: column-wrap;
         font-size:3vw;
+        width:100%;
+        height:100%;
     }
 }
 
@@ -311,7 +376,7 @@ h2{
     .mad-text{
         /*margin-top: 22%;*/
         display:flex;
-        flex-direction: column-wrap;
+        flex-direction:column;
         font-size:3vw;
         text-align:left;
         
@@ -321,9 +386,10 @@ h2{
     .cake_class_text{
         /*margin-top: 22%;*/
         display:flex;
-        flex-direction: column-wrap;
-        font-size:3vw;
+        flex-wrap: column-wrap;
+        font-size:3vh;
         text-align: left;
+        padding-right:550px;
         
     }
 }
@@ -331,24 +397,65 @@ h2{
 @media (max-width:600px){
     .footer-social-icons ul li a{
         display: flex;
-        flex-direction: column-wrap;
+        flex-wrap: column-wrap;
         font-size:2vw;
+        padding:12px;
     }
 }
 
-
-
-
-@media(max-width: 600px){
-  nav{
-    display: flex;
-    flex-flow: row-wrap;
-    flex-direction: column;
+@media (max-width:600px){
+  .footer-text{
+      flex-direction: column;
   }
 }
 
+
+@media(max-width: 500px){
+  body{
+    margin-right:0;
+    width:100%;
+    box-sizing: border-box;
+  }
+  nav{
+    margin:0;
+    padding:0;
+    align-items: flex-end;
+  }
+  nav ul li a{
+    display: flex;
+    /*flex-flow: row-wrap;*/
+    flex-direction: column;
+    font-size: 10px;
+    margin:0;
+    padding:0;
+    float:left;
+    
+
+  }
+  nav ul li{
+    margin-top:6px;
+    /*margin-bottom:0.05em;*/
+  }
+  nav li{
+    margin-bottom: 5px;
+    float:left;
+  }
+}
+
+
+
+@media(max-width: 700px){
+  nav ul {
+    display:flex;
+    flex-flow: column;
+    margin: 0;
+    padding:0;
+    justify-content: space-between;
+  }
+}
 .footer-main-div p{
     text-align: center;
     margin-top: 10px;
-    text-decoration-color: white;
+    color: white;
+    /*text-decoration-color: white;*/
 }
